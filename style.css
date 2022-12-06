@@ -36,6 +36,9 @@ body {
     flex-direction: column;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0px 0px 22px 3px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 22px 3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 22px 3px rgba(0, 0, 0, 0.25);
 }
 
 .header {
@@ -142,13 +145,17 @@ textarea,
     padding: 5px 10px;
     border-radius: 2px;
     font-size: 8px;
+    cursor: pointer;
+    transition: scale .1s;
+}
+
+.btn .to-change button:active {
+    scale: .989;
 }
 
 .reset-btn {
     padding: 7px 0px;
-
     background-color: var(--secondary-btn);
-
 }
 
 .reset-btn button {
@@ -156,5 +163,4 @@ textarea,
     padding: 1px 10px;
     border-radius: 2px;
     color: var(--pure-white);
-
 }
