@@ -89,56 +89,72 @@ textarea,
 .btn {
     width: 100%;
     background: rgb(151, 139, 255);
-    padding: 2px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.btn .my,
+.btn .to-change,
+.btn .reset-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pure-white);
+}
+
+.btn .my {
+    padding: 10px 10px;
 }
 
 .btn a {
+    color: var(--pure-white);
     text-decoration: none;
     font-size: 10px;
-    color: var(--pure-white);
-    margin-left: 10px;
     position: relative;
 }
 
 .btn a::after {
     position: absolute;
     content: '';
-    width: 1px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.286);
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.182);
     top: 50%;
     transform: translateY(-50%);
-    right: -2px;
+    right: -5px;
 }
 
-.btn a:hover {
-    text-decoration: underline;
+.btn .to-change {
+    justify-content: space-between;
+    padding: 6px 50px 6px 0;
+    flex-grow: 1;
+    height: 100%;
 }
 
-.clear_btn {
-    background: rgb(65, 144, 255);
+.btn .to-change span {
+    font-size: 12px;
+
+}
+
+.btn .to-change button {
     padding: 5px 10px;
-    cursor: pointer;
-    float: right;
-    color: var(--pure-white);
-}
-
-.btn .case {
-    font-size: 10px;
-    color: var(--pure-white);
-    margin: 0 5px 0 5px;
-}
-
-.btn .casing {
-    background: var(--pure-white);
-    cursor: pointer;
-    color: black;
-    font-size: 10px;
-    padding: 2px 10px;
     border-radius: 2px;
-    transition: scale .2s;
+    font-size: 8px;
 }
 
-.btn .casing:active {
-    scale: .98;
+.reset-btn {
+    padding: 7px 0px;
+
+    background-color: var(--secondary-btn);
+
+}
+
+.reset-btn button {
+    background: none;
+    padding: 1px 10px;
+    border-radius: 2px;
+    color: var(--pure-white);
+
 }

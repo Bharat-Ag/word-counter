@@ -25,12 +25,18 @@
 
         <textarea id="space" placeholder="Start typing, or copy and paste your document here..."></textarea>
         <div class="btn">
-            <a href="#">Visit My Site </a>
-            <span class="case"> Casing :</span>
-            <button class="casing">Upper </button>
-            <button class="casing">Capitalize </button>
-            <button class="casing">Lower Case</button>
-            <button class="clear_btn">Clear All</button>
+            <div class="my">
+                <a href="#">Visit My Site </a>
+            </div>
+            <div class="to-change">
+                <span class="case"> Casing :</span>
+                <button id="upper" class="casing">Upper </button>
+                <button id="capital" class="casing">Capitalize </button>
+                <button id="lower" class="casing">Lower Case</button>
+            </div>
+            <div class="reset-btn">
+                <button class="clear_btn">Clear All</button>
+            </div>
         </div>
     </div>
 
@@ -39,6 +45,7 @@
         let word = document.querySelector("#words");
         let char = document.querySelector("#characters");
         let clear = document.querySelector(".clear_btn");
+
 
         clear.addEventListener("click", () => {
             inFld.value = null;
@@ -51,6 +58,17 @@
             var text = this.value;
             char.innerHTML = `${text.length} `;
         })
+
+
+        let uprBtn = document.querySelector("#upper"),
+            cptBtn = document.querySelector("#capital"),
+            lowBtn = document.querySelector("#lower");
+
+        uprBtn.addEventListener("click", () => {
+            console.log(uprBtn);
+        });
+
+
     </script>
 </body>
 
