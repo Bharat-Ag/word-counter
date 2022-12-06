@@ -82,6 +82,18 @@ textarea {
     height: 180px;
 }
 
+textarea.upper {
+    text-transform: uppercase;
+}
+
+textarea.capital {
+    text-transform: capitalize;
+}
+
+textarea.lower {
+    text-transform: lowercase;
+}
+
 .clear_btn,
 textarea,
 .casing {
@@ -153,14 +165,12 @@ textarea,
     scale: .989;
 }
 
-.reset-btn {
-    padding: 7px 0px;
-    background-color: var(--secondary-btn);
-}
-
 .reset-btn button {
     background: none;
     padding: 1px 10px;
-    border-radius: 2px;
     color: var(--pure-white);
+    height: 100%;
+    padding: 8px 5px;
+    cursor: pointer;
+    background-color: var(--secondary-btn);
 }

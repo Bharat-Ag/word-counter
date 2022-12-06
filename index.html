@@ -46,27 +46,36 @@
         let char = document.querySelector("#characters");
         let clear = document.querySelector(".clear_btn");
 
-
         clear.addEventListener("click", () => {
             inFld.value = null;
             char.innerHTML = "0";
         })
-
-
 
         inFld.addEventListener('input', function () {
             var text = this.value;
             char.innerHTML = `${text.length} `;
         })
 
+        // i know here i can use for each also but ab jaane de
+        // case changing 
 
         let uprBtn = document.querySelector("#upper"),
             cptBtn = document.querySelector("#capital"),
             lowBtn = document.querySelector("#lower");
 
         uprBtn.addEventListener("click", () => {
-            console.log(uprBtn);
+            inFld.classList.toggle("upper");
         });
+
+        cptBtn.addEventListener("click", () => {
+            inFld.classList.toggle("capital")
+        });
+        lowBtn.addEventListener("click", () => {
+            inFld.classList.toggle("lower")
+        });
+
+
+
 
 
     </script>
