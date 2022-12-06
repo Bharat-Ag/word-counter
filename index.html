@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="word">
+                <span id="words"> 0 </span>
+                <h3>Word</h3>
+            </div>
+            <div class="characters">
+                <span id="characters"> 0 </span>
+                <h3>character </h3>
+            </div>
+        </div>
+
+
+        <textarea id="space" placeholder="Start typing, or copy and paste your document here..."></textarea>
+        <div class="btn">
+            <a href="#">Visit My Site </a>
+            <span class="case"> Casing :</span>
+            <button class="casing">Upper </button>
+            <button class="casing">Capitalize </button>
+            <button class="casing">Lower Case</button>
+            <button class="clear_btn">Clear All</button>
+        </div>
+    </div>
+
+    <script>
+        let inFld = document.querySelector("#space");
+        let word = document.querySelector("#words");
+        let char = document.querySelector("#characters");
+        let clear = document.querySelector(".clear_btn");
+
+        clear.addEventListener("click", () => {
+            inFld.value = null;
+            char.innerHTML = "0";
+        })
+
+
+
+        inFld.addEventListener('input', function () {
+            var text = this.value;
+            char.innerHTML = `${text.length} `;
+        })
+    </script>
+</body>
+
+</html>

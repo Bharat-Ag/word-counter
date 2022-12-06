@@ -1,1 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-clr: rgb(151, 139, 255);
+    --secondary-btn: rgb(65, 144, 255);
+    --pure-white: white;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(58, 64, 180);
+    background: -moz-linear-gradient(90deg, rgba(58, 64, 180, 1) 0%, rgba(69, 165, 252, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(58, 64, 180, 1) 0%, rgba(69, 165, 252, 1) 100%);
+    background: linear-gradient(90deg, rgba(58, 64, 180, 1) 0%, rgba(69, 165, 252, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a40b4", endColorstr="#45a5fc", GradientType=1);
+    padding: 20px;
+    user-select: none;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    color: var(--pure-white);
+    background: var(--primary-clr);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header div span {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+
+
+.input {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 5px 10px;
+    height: 180px;
+}
+
+.clear_btn,
+textarea,
+.casing {
+    outline: none;
+    border: none;
+}
+
+.btn {
+    width: 100%;
+    background: rgb(151, 139, 255);
+    padding: 2px 0;
+}
+
+.btn a {
+    text-decoration: none;
+    font-size: 10px;
+    color: var(--pure-white);
+    margin-left: 10px;
+    position: relative;
+}
+
+.btn a::after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.286);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -2px;
+}
+
+.btn a:hover {
+    text-decoration: underline;
+}
+
+.clear_btn {
+    background: rgb(65, 144, 255);
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    color: var(--pure-white);
+}
+
+.btn .case {
+    font-size: 10px;
+    color: var(--pure-white);
+    margin: 0 5px 0 5px;
+}
+
+.btn .casing {
+    background: var(--pure-white);
+    cursor: pointer;
+    color: black;
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 2px;
+    transition: scale .2s;
+}
+
+.btn .casing:active {
+    scale: .98;
+}
