@@ -13,12 +13,12 @@
     <div class="container">
         <div class="header">
             <div class="word">
-                <span id="words"> 0 </span>
+                <span id="words">0</span>
                 <h3>Word</h3>
             </div>
-            <div class="characters">
-                <span id="characters"> 0 </span>
-                <h3>character </h3>
+            <div class="character">
+                <span id="characters">0</span>
+                <h3>Character</h3>
             </div>
         </div>
 
@@ -46,15 +46,56 @@
         let char = document.querySelector("#characters");
         let clear = document.querySelector(".clear_btn");
 
+        let headerWord = document.querySelector(".word h3")
+        let headerchar = document.querySelector(".character h3")
+
+
+
         clear.addEventListener("click", () => {
             inFld.value = null;
             char.innerHTML = "0";
+            word.innerHTML = "0";
+            headerWord.innerHTML = "Word"
+            headerchar.innerHTML = "Character";
+
+
+
         })
 
         inFld.addEventListener('input', function () {
             var text = this.value;
-            char.innerHTML = `${text.length} `;
+            char.innerHTML = `${text.length}`;
+
+            text = text.trim();
+            let words = text.split(" ");
+            let newClean = words.filter(function (wd) {
+                return wd != "";
+            });
+
+            word.innerHTML = `${newClean.length}`;
+
+
+            if (newClean.length > 1) {
+                headerWord.innerHTML = "Words";
+            }
+            else {
+                headerWord.innerHTML = "Word";
+
+            }
+            if (text.length > 1) {
+
+                headerchar.innerHTML = "Characters";
+
+            }
+            else {
+                headerchar.innerHTML = "Character";
+
+
+            }
+
         })
+
+
 
         // i know here i can use for each also but ab jaane de
         // case changing 
@@ -73,9 +114,6 @@
         lowBtn.addEventListener("click", () => {
             inFld.classList.toggle("lower")
         });
-
-
-
 
 
     </script>
