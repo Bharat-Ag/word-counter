@@ -21,18 +21,18 @@
                 <h3>Character</h3>
             </div>
         </div>
-
-
         <textarea id="space" placeholder="Start typing, or copy and paste your document here..."></textarea>
         <div class="btn">
-            <div class="my">
-                <a href="#">Visit My Site </a>
-            </div>
-            <div class="to-change">
-                <span class="case"> Casing :</span>
-                <button id="upper" class="casing">Upper </button>
-                <button id="capital" class="casing">Capitalize </button>
-                <button id="lower" class="casing">Lower Case</button>
+            <div class="feature">
+                <div class="my">
+                    <a href="#">Visit My Site </a>
+                </div>
+                <div class="to-change">
+                    <span class="case"> Casing :</span>
+                    <button id="upper" class="casing">Upper </button>
+                    <button id="capital" class="casing">Capitalize </button>
+                    <button id="lower" class="casing">Lower Case</button>
+                </div>
             </div>
             <div class="reset-btn">
                 <button class="clear_btn">Clear All</button>
@@ -71,34 +71,23 @@
             let newClean = words.filter(function (wd) {
                 return wd != "";
             });
-
             word.innerHTML = `${newClean.length}`;
-
 
             if (newClean.length > 1) {
                 headerWord.innerHTML = "Words";
             }
             else {
                 headerWord.innerHTML = "Word";
-
             }
             if (text.length > 1) {
-
                 headerchar.innerHTML = "Characters";
-
             }
             else {
                 headerchar.innerHTML = "Character";
-
-
             }
 
         })
 
-
-
-        // i know here i can use for each also but ab jaane de
-        // case changing 
 
         let uprBtn = document.querySelector("#upper"),
             cptBtn = document.querySelector("#capital"),
