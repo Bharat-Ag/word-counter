@@ -25,7 +25,7 @@
         <div class="btn">
             <div class="feature">
                 <div class="my">
-                    <a href="#">Visit My Site </a>
+                    <a href="https://bharat-ag.github.io/Porfotlio/" target="_blank">Visit My Site </a>
                 </div>
                 <div class="to-change">
                     <span class="case"> Casing :</span>
@@ -40,72 +40,7 @@
         </div>
     </div>
 
-    <script>
-        let inFld = document.querySelector("#space");
-        let word = document.querySelector("#words");
-        let char = document.querySelector("#characters");
-        let clear = document.querySelector(".clear_btn");
-
-        let headerWord = document.querySelector(".word h3")
-        let headerchar = document.querySelector(".character h3")
-
-
-
-        clear.addEventListener("click", () => {
-            inFld.value = null;
-            char.innerHTML = "0";
-            word.innerHTML = "0";
-            headerWord.innerHTML = "Word"
-            headerchar.innerHTML = "Character";
-
-
-
-        })
-
-        inFld.addEventListener('input', function () {
-            var text = this.value;
-            char.innerHTML = `${text.length}`;
-
-            text = text.trim();
-            let words = text.split(" ");
-            let newClean = words.filter(function (wd) {
-                return wd != "";
-            });
-            word.innerHTML = `${newClean.length}`;
-
-            if (newClean.length > 1) {
-                headerWord.innerHTML = "Words";
-            }
-            else {
-                headerWord.innerHTML = "Word";
-            }
-            if (text.length > 1) {
-                headerchar.innerHTML = "Characters";
-            }
-            else {
-                headerchar.innerHTML = "Character";
-            }
-
-        })
-
-
-        let uprBtn = document.querySelector("#upper"),
-            cptBtn = document.querySelector("#capital"),
-            lowBtn = document.querySelector("#lower");
-
-        uprBtn.addEventListener("click", () => {
-            inFld.classList.toggle("upper");
-        });
-
-        cptBtn.addEventListener("click", () => {
-            inFld.classList.toggle("capital")
-        });
-        lowBtn.addEventListener("click", () => {
-            inFld.classList.toggle("lower")
-        });
-
-
-    </script>
+    <script src="./script.js" defer></script>
 </body>
 
 </html>
