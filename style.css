@@ -95,18 +95,6 @@ textarea {
     height: 180px;
 }
 
-textarea.upper {
-    text-transform: uppercase;
-}
-
-textarea.capital {
-    text-transform: capitalize;
-}
-
-textarea.lower {
-    text-transform: lowercase;
-}
-
 .clear_btn,
 textarea,
 .casing {
