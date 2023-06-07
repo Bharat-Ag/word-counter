@@ -31,9 +31,7 @@ inFld.addEventListener('keyup', () => {
     headerWord.innerText = numberOfWord.length > 1 ? "Words" : "Word";
 })
 
-
 let uprBtn = document.querySelector("#upper"),
-    cptBtn = document.querySelector("#capital"),
     lowBtn = document.querySelector("#lower");
 
 uprBtn.addEventListener("click", () => {
@@ -42,20 +40,8 @@ uprBtn.addEventListener("click", () => {
     inFld.value = upperTxt;
 })
 
-cptBtn.addEventListener("click", () => {
-    let input = inFld.value;
-    let str = input.split(" ");
-
-    for (var wt of str) {
-        word = wt[0].toUpperCase() + wt.substring(1);
-    }
-    inFld.value = str.join(" ");
-})
-
-
 lowBtn.addEventListener("click", () => {
     inFld.classList.remove("active")
     let lowerTxt = inFld.value.toLowerCase();
     inFld.value = lowerTxt;
 });
-
